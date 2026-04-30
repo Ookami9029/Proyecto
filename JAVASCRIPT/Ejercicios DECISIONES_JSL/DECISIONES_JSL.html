@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comparar numeros</title>
+<!-- MUY IMPORTANTE se le pone defer inmediatamente después del script para que lea primero el HTML y luego el JS -->
+    <script defer src="decisiones_jsl.js"></script>
+    <link rel="stylesheet" href="decisiones_jsl.css">
+</head>
+<body>
+<!--PRIMER EJERCICIO -- Leer un número entero de dos dígitos y determinar si ambos dígitos son pares.-->
+    <div class="contenedor-ejercicios">
+        <div class="tarjeta">
+            <h2>Comparar numeros de dos digitos</h2>
+            <form id="formulario">
+                <label>Ejercicio 1</label>
+                <input type="number" id="number1" placeholder="Numero de dos digitos">
+                <br>
+                <button type="button" onclick="analizarnumeropar()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- SEGUNDO EJERCICIO -- Leer un número entero de dos dígitos menor que 20 y determinar si es primo. -->
+        <div class="tarjeta">
+            <h2>Determinar numero menor de 20 si es primo</h2>
+            <form id="formulario">
+                <label>Ejercicio 2</label>
+                <input type="number" id="number2" placeholder="Numero de dos dígitos">
+                <br>
+                <button type="button" onclick="verificarnumeroprimo()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- TERCER EJERCICIO -- Leer un número entero de dos dígitos y determinar si es primo y además si es negativo.  -->
+        <div class="tarjeta">
+            <h2>Determinar si numero es primo y negativo</h2>
+            <form id="formulario">
+                <label>Ejercicio 3</label>
+                <input type="number" id="number3" placeholder="Numero de dos dígitos">
+                <br>
+                <button type="button" onclick="numeroprimonegativo()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- CUARTO EJERCICIO -- Leer un número entero de dos dígitos y determinar si sus dos dígitos son primos.-->
+        <div class="tarjeta">
+            <h2>Determinar dígitos de un entero primos</h2>
+            <form id="formulario">
+                <label>Ejercicio 4</label>
+                <input type="number" id="number4" placeholder="Numero de dos dígitos">
+                <br>
+                <button type="button" onclick="analizarnumerosprimos()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- QUINTO EJERCICIO -- Leer un número entero de dos dígitos y determinar si un dígito es múltiplo del otro. -->
+        <div class="tarjeta">
+            <h2>Determinar si un dígito es múltiplo de otro</h2>
+            <form id="formulario">
+                <label>Ejercicio 5</label>
+                <input type="number" id="number5" placeholder="Numero de dos dígitos">
+                <br>
+                <button type="button" onclick="analizarmultiplos()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- SEXTO EJERCICIO -- Leer un número entero de dos dígitos y determinar si los dos dígitos son iguales.-->
+        <div class="tarjeta">
+            <h2>Determinar si ambos dígitos son iguales</h2>
+            <form id="formulario">
+                <label>Ejercicio 6</label>
+                <input type="number" id="number6" placeholder="Numero de dos dígitos">
+                <br>
+                <button type="button" onclick="analizarnumerosiguales()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- SÉPTIMO EJERCICIO -- Leer dos números enteros y determinar cuál es el mayor.-->
+        <div class="tarjeta">
+            <h2>Determinar cual es el numero mayor</h2>
+            <form id="formulario">
+                <label>Ejercicio 7 (N1)</label>
+                <input type="number" id="number7" placeholder="Numero">
+                <label>Ejercicio 7 (N2)</label>
+                <input type="number" id="secondnumber7" placeholder="Numero">
+                <br>
+                <button type="button" onclick="verificarnumeromayor()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- OCTAVO EJERCICIO -- Leer dos números enteros de dos dígitos y determinar si tienen dígitos comunes. -->
+        <div class="tarjeta">
+            <h2>Determinar si dos números tienen dígitos comunes</h2>
+            <form>
+                <label>Ejercicio 8 (N1)</label>
+                <input type="number" id="number8_1" placeholder="Numero de dos dígitos">
+                <label>Ejercicio 8 (N2)</label>
+                <input type="number" id="number8_2" placeholder="Numero de dos dígitos">
+                <br>
+                <button type="button" onclick="digitosComunes()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- NOVENO EJERCICIO -- Leer dos números enteros de dos dígitos y determinar si la suma de los dos números 
+origina un número par.  -->
+        <div class="tarjeta">
+            <h2>Determinar si la suma de dos números es par</h2>
+            <form>
+                <label>Ejercicio 9 (N1)</label>
+                <input type="number" id="number9_1" placeholder="Numero de dos dígitos">
+                <label>Ejercicio 9 (N2)</label>
+                <input type="number" id="number9_2" placeholder="Numero de dos dígitos">
+                <br>
+                <button type="button" onclick="sumaNumerosEsPar()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- DÉCIMO EJERCICIO -- Leer dos números enteros de dos dígitos y determinar a cuánto es igual la suma de todos 
+los dígitos.  -->
+        <div class="tarjeta">
+            <h2>Suma de todos los dígitos de dos números</h2>
+            <form>
+                <label>Ejercicio 10 (N1)</label>
+                <input type="number" id="number10_1" placeholder="Numero de dos dígitos">
+                <label>Ejercicio 10 (N2)</label>
+                <input type="number" id="number10_2" placeholder="Numero de dos dígitos">
+                <br>
+                <button type="button" onclick="sumarCuatroDigitosTotales()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 11° EJERCICIO -- Leer un número entero de tres dígitos y determinar a cuánto es igual la suma de sus 
+dígitos. -->
+        <div class="tarjeta">
+            <h2>Suma de dígitos de un número de tres dígitos</h2>
+            <form>
+                <label>Ejercicio 11</label>
+                <input type="number" id="number11" placeholder="Numero de tres dígitos">
+                <br>
+                <button type="button" onclick="sumaTresDigitos()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 12° EJERCICIO -- Leer un número entero de tres dígitos y determinar si al menos dos de sus tres dígitos 
+son iguales.  -->
+        <div class="tarjeta">
+            <h2>Determinar si al menos dos dígitos, de tres, son iguales</h2>
+            <form>
+                <label>Ejercicio 12</label>
+                <input type="number" id="number12" placeholder="Numero de tres dígitos">
+                <br>
+                <button type="button" onclick="alMenosDosIguales()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 13° EJERCICIO -- Leer un número entero de tres dígitos y determinar en qué posición está el mayor dígito.  -->
+        <div class="tarjeta">
+            <h2>Determinar posición del dígito mayor</h2>
+            <form>
+                <label>Ejercicio 13</label>
+                <input type="number" id="number13" placeholder="Numero de tres dígitos">
+                <br>
+                <button type="button" onclick="posicionMayorDigito()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 14° EJERCICIO -- Leer un número entero de tres dígitos y determinar si algún dígito es múltiplo de los otros.  -->
+        <div class="tarjeta">
+            <h2>Determinar si un dígito es múltiplo de los otros</h2>
+            <form>
+                <label>Ejercicio 14</label>
+                <input type="number" id="number14" placeholder="Numero de tres dígitos">
+                <br>
+                <button type="button" onclick="digitoMultiploDeOtros()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 15° EJERCICIO -- Leer tres números enteros y determinar cuál es el mayor. Usar solamente dos variables.  -->
+        <div class="tarjeta">
+            <h2>Determinar el mayor de tres números</h2>
+            <form>
+                <label>Ejercicio 15 (N1)</label>
+                <input type="number" id="number15_1" placeholder="Numero">
+                <label>Ejercicio 15 (N2)</label>
+                <input type="number" id="number15_2" placeholder="Numero">
+                <label>Ejercicio 15 (N3)</label>
+                <input type="number" id="number15_3" placeholder="Numero">
+                <br>
+                <button type="button" onclick="mayorTresVariablesLimitadas()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 16° EJERCICIO -- Leer tres números enteros y mostrarlos de forma ascendente.  -->
+        <div class="tarjeta">
+            <h2>Ordenar tres números de forma ascendente</h2>
+            <form>
+                <label>Ejercicio 16</label>
+                <input type="number" id="number16_1" placeholder="Numero">
+                <input type="number" id="number16_2" placeholder="Numero">
+                <input type="number" id="number16_3" placeholder="Numero">
+                <br>
+                <button type="button" onclick="ordenarAscendente()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 17° EJERCICIO -- Leer tres números enteros de dos dígitos cada uno y determinar en cuál de ellos se 
+encuentra el mayor dígito.  -->
+        <div class="tarjeta">
+            <h2>Encontrar cuál número tiene el mayor dígito</h2>
+            <form>
+                <label>Ejercicio 17 (N1)</label>
+                <input type="number" id="number17_1" placeholder="Numero de dos dígitos">
+                <label>Ejercicio 17 (N2)</label>
+                <input type="number" id="number17_2" placeholder="Numero de dos dígitos">
+                <label>Ejercicio 17 (N3)</label>
+                <input type="number" id="number17_3" placeholder="Numero de dos dígitos">
+                <br>
+                <button type="button" onclick="dondeEstaElMayorDigito()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 18° EJERCICIO -- Leer un número entero de tres dígitos y determinar si el primer dígito es igual al último.  -->
+        <div class="tarjeta">
+            <h2>Determinar si primer y último dígito son iguales</h2>
+            <form>
+                <label>Ejercicio 18</label>
+                <input type="number" id="number18" placeholder="Numero de tres dígitos">
+                <br>
+                <button type="button" onclick="primeroIgualUltimo()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 19° EJERCICIO -- Leer un número entero de tres dígitos y determinar cuántos dígitos primos tiene.  -->
+        <div class="tarjeta">
+            <h2>Contar dígitos primos en número de tres dígitos</h2>
+            <form>
+                <label>Ejercicio 19</label>
+                <input type="number" id="number19" placeholder="Numero de tres dígitos">
+                <br>
+                <button type="button" onclick="contarPrimosTresDigitos()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 20° EJERCICIO -- Leer un número entero de tres dígitos y determinar cuántos dígitos pares tiene.  -->
+        <div class="tarjeta">
+            <h2>Contar dígitos pares en número de tres dígitos</h2>
+            <form>
+                <label>Ejercicio 20</label>
+                <input type="number" id="number20" placeholder="Numero de tres dígitos">
+                <br>
+                <button type="button" onclick="contarParesTresDigitos()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 21° EJERCICIO -- Leer un número entero de tres dígitos y determinar si alguno de sus dígitos es igual a la 
+suma de los otros dos.  -->
+        <div class="tarjeta">
+            <h2>Determinar si un dígito es la suma de los otros dos</h2>
+            <form>
+                <label>Ejercicio 21</label>
+                <input type="number" id="number21" placeholder="Numero de tres dígitos">
+                <br>
+                <button type="button" onclick="digitoEsSumaDeOtros()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 22° EJERCICIO -- Leer un número entero de cuatro dígitos y determinar a cuanto es igual la suma de sus 
+dígitos.  -->
+        <div class="tarjeta">
+            <h2>Suma de dígitos de un número de cuatro cifras</h2>
+            <form>
+                <label>Ejercicio 22</label>
+                <input type="number" id="number22" placeholder="Numero de cuatro dígitos">
+                <br>
+                <button type="button" onclick="sumarDigitosCuatro()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 23° EJERCICIO -- Leer un número entero de cuatro dígitos y determinar cuántos dígitos pares tiene.  -->
+        <div class="tarjeta">
+            <h2>Contar dígitos pares en número de cuatro cifras</h2>
+            <form>
+                <label>Ejercicio 23</label>
+                <input type="number" id="number23" placeholder="Numero de cuatro dígitos">
+                <br>
+                <button type="button" onclick="contarParesCuatroDigitos()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 24° EJERCICIO -- Leer un número entero menor que 50 y positivo y determinar si es un número primo.  -->
+        <div class="tarjeta">
+            <h2>Determinar si número menor a 50 es primo</h2>
+            <form>
+                <label>Ejercicio 24</label>
+                <input type="number" id="number24" placeholder="Numero menor a 50 y positivo">
+                <br>
+                <button type="button" onclick="esPrimoMenorCincuenta()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 25° EJERCICIO -- Leer un número entero de cinco dígitos y determinar si es un número capicúo. Ej. 15651, 59895. -->
+        <div class="tarjeta">
+            <h2>Determinar si un número de cinco dígitos es capicúo</h2>
+            <form>
+                <label>Ejercicio 25</label>
+                <input type="number" id="number25" placeholder="Numero de cinco dígitos">
+                <br>
+                <button type="button" onclick="esCapicuoCincoDigitos()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 26° EJERCICIO -- Leer un número entero de cuatro dígitos y determinar si el segundo dígito es igual al penúltimo.  -->
+        <div class="tarjeta">
+            <h2>Determinar si segundo dígito es igual al penúltimo</h2>
+            <form>
+                <label>Ejercicio 26</label>
+                <input type="number" id="number26" placeholder="Numero de cuatro dígitos">
+                <br>
+                <button type="button" onclick="segundoIgualPenultimo()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 27° EJERCICIO -- Leer un número entero y determina si es igual a 10.  -->
+        <div class="tarjeta">
+            <h2>Determinar si el número es igual a 10</h2>
+            <form>
+                <label>Ejercicio 27</label>
+                <input type="number" id="number27" placeholder="Numero">
+                <br>
+                <button type="button" onclick="esIgualADiez()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 28° EJERCICIO -- Leer un número entero y determinar si es múltiplo de 7.  -->
+        <div class="tarjeta">
+            <h2>Determinar si el número es múltiplo de 7</h2>
+            <form>
+                <label>Ejercicio 28</label>
+                <input type="number" id="number28" placeholder="Numero">
+                <br>
+                <button type="button" onclick="esMultiploDeSiete()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 29° EJERCICIO -- Leer un número entero y determinar si termina en 7.  -->
+        <div class="tarjeta">
+            <h2>Determinar si el número termina en 7</h2>
+            <form>
+                <label>Ejercicio 29</label>
+                <input type="number" id="number29" placeholder="Numero">
+                <br>
+                <button type="button" onclick="terminaEnSiete()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 30° EJERCICIO -- Leer un número entero menor que mil y determinar cuántos dígitos tiene.  -->
+        <div class="tarjeta">
+            <h2>Determinar cuántos dígitos tiene un número menor a 1000</h2>
+            <form>
+                <label>Ejercicio 30</label>
+                <input type="number" id="number30" placeholder="Numero menor a 1000">
+                <br>
+                <button type="button" onclick="cantidadDeDigitos()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 31° EJERCICIO -- Leer un número entero de dos dígitos, guardar cada dígito en una variable diferente y 
+luego mostrarlas en pantalla.  -->
+        <div class="tarjeta">
+            <h2>Guardar y mostrar dígitos por separado</h2>
+            <form>
+                <label>Ejercicio 31</label>
+                <input type="number" id="number31" placeholder="Numero de dos dígitos">
+                <br>
+                <button type="button" onclick="mostrarDigitosSeparados()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 32° EJERCICIO -- Leer un número entero de 4 dígitos y determinar si tiene mas dígitos pares o impares.  -->
+        <div class="tarjeta">
+            <h2>Determinar si tiene más pares o impares (4 dígitos)</h2>
+            <form>
+                <label>Ejercicio 32</label>
+                <input type="number" id="number32" placeholder="Numero de cuatro dígitos">
+                <br>
+                <button type="button" onclick="masParesQueImpares()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 33° EJERCICIO -- Leer dos números enteros y determinar cuál es múltiplo de cuál.  -->
+        <div class="tarjeta">
+            <h2>Determinar cuál número es múltiplo de cuál</h2>
+            <form>
+                <label>Ejercicio 33 (N1)</label>
+                <input type="number" id="number33_1" placeholder="Numero">
+                <label>Ejercicio 33 (N2)</label>
+                <input type="number" id="number33_2" placeholder="Numero">
+                <br>
+                <button type="button" onclick="determinarCualEsMultiplo()">Analizar</button>
+            </form>
+            <br>
+        </div>
+
+<!-- 34° EJERCICIO -- Leer tres números enteros y determinar si el último dígito de los tres números es igual.  -->
+        <div class="tarjeta">
+            <h2>Determinar si el último dígito de tres números es igual</h2>
+            <form>
+                <label>Ejercicio 34 (N1)</label>
+                <input type="number" id="number34_1" placeholder="Numero">
+                <label>Ejercicio 34 (N2)</label>
+                <input type="number" id="number34_2" placeholder="Numero">
+                <label>Ejercicio 34 (N3)</label>
+                <input type="number" id="number34_3" placeholder="Numero">
+                <br>
+                <button type="button" onclick="ultimosDigitosIguales()">Analizar</button>
+            </form>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
