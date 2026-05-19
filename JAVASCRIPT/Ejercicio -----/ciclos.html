@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="ciclos.js"></script>
+    <link rel="stylesheet" href="ciclos.css">
+</head>
+<body>
+<!-- 1. Leer un número entero y mostrar todos los enteros comprendidos entre 1 y el 
+número leído.  -->
+    <div class="contenedor-ejercicios">
+        <div class="tarjeta">
+            <h2>Leer numero y mostrar todos los enteros entre medio</h2>
+            <form id="formulario">
+                <label>Ejercicio 1</label>
+                <input type="number" id="number1" placeholder="Ingresar numero">
+                <br>
+                <button type="button" onclick="todoslosenteros()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado1"></p>
+        </div>
+<!-- 2. Leer un número entero y mostrar todos los pares comprendidos entre 1 y el 
+número leído.  -->
+        <div class="tarjeta">
+            <h2>Leer numero y devolver todos los números pares</h2>
+            <form id="formulario">
+                <label>Ejercicio 2</label>
+                <input type="number" id="number2" placeholder="ingresar un numero">
+                <br>
+                <button type="button" onclick="todoslospares()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado2"></p>
+        </div>
+<!-- 3. Leer un número entero y mostrar todos los divisores exactos del número 
+comprendidos entre 1 y el número leído  -->
+        <div class="tarjeta">
+            <h2>Mostrar todos los divisores exactos</h2>
+            <form id="formulario">
+                <label>Ejercicio 3</label>
+                <input type="number" id="number3" placeholder="Ingresar numero">
+                <br>
+                <button type="button" onclick="divisoresexactos()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado3"></p>
+        </div>
+<!-- 4. Leer dos números y mostrar todos los enteros comprendidos entre ellos.  -->
+        <div class="tarjeta">
+            <h2>Enteros comprendidos entre dos numeros</h2>
+            <form id="formulario">
+                <label>Ejercicio 4 (N1)</label>
+                <input type="number" id="number4" placeholder="Ingresar un numero">
+                <label>Ejercicio 4 (N2)</label>
+                <input type="number" id="number4_2" placeholder="Ingresar un numero">
+                <br>
+                <button type="button" onclick="dosnumerosenteros()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado4"></p>
+        </div>
+<!-- 5. Leer dos números y mostrar todos los números terminados en 4 comprendidos entre ellos.  -->
+        <div class="tarjeta">
+            <h2>Mostrar números terminados en 4</h2>
+            <form id="formulario">
+                <label>Ejercicio 5 (N1)</label>
+                <input type="number" id="number5" placeholder="ingresar numero">
+                <label>Ejercicio 5 (N2)</label>
+                <input type="number" id="number5_2" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="terminadosen4()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado5"></p>
+        </div>
+<!-- 6. Leer un número entero de tres dígitos y mostrar todos los enteros comprendidos 
+entre 1 y cada uno de los dígitos.  -->
+        <div class="tarjeta">
+            <h2>Mostrar números entre cada uno de los dígitos</h2>
+            <form id="formulario">
+                <label>Ejercicio 6</label>
+                <input type="number" id="number6" placeholder="Numero de tres digitos">
+                <br>
+                <button type="button" onclick="numerosentre3digitos()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado6"></p>
+        </div>
+<!-- 7. Mostrar en pantalla todos los enteros comprendidos entre 1 y 100.  -->
+        <div class="tarjeta">
+            <h2>Mostrar enteros entre 1 y 100</h2>
+            <form id="formulario">
+                <label>Ejercicio 7</label>
+                <br>
+                <button type="button" onclick="numerosentre1y100()">Mostrar números entre 1 y 100</button>
+            </form>
+            <br>
+            <p id="resultado7"></p>
+        </div>
+<!-- 8. Mostrar en pantalla todos los pares comprendidos entre 20 y 200.  -->
+        <div class="tarjeta">
+            <h2>Mostrar pares entre 20 y 200</h2>
+            <form id="formulario">
+                <label>Ejercicio 8</label>
+                <br>
+                <button type="button" onclick="paresentre20y100()">Mostrar pares entre 20 y 200</button>
+            </form>
+            <br>
+            <p id="resultado8"></p>
+        </div>
+<!-- 9. Mostrar en pantalla todos los números terminados en 6 comprendidos entre 25 y 
+205.  -->
+        <div class="tarjeta">
+            <h2>Mostrar terminados en 6</h2>
+            <form id="formulario">
+                <label>Ejercicio 9</label>
+                <br>
+                <button type="button" onclick="mostrarterminadosen6()">Mostrar números terminados en 6 entre 25 y 205</button>
+            </form>
+            <br>
+            <p id="resultado9"></p>
+        </div>
+<!-- 10. Leer un número entero y determinar a cuánto es igual la suma de todos los enteros 
+comprendidos entre 1 y el número leído.   -->
+        <div class="tarjeta">
+            <h2>Determinar suma entre numero y 1</h2>
+            <form id="formulario">
+                <label>Ejercicio 10</label>
+                <input type="number" id="number10" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="sumartodosentrenumeros()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado10"></p>
+        </div>
+<!-- 11. Leer un número entero de 3 dígitos y determinar si tiene el dígito 1.  -->
+        <div class="tarjeta">
+            <h2>Numero de tres digitos y determinar si tiene 1</h2>
+            <form id="formulario">
+                <label>Ejercicio 11</label>
+                <input type="number" id="number11" placeholder="Numero de tres digitos">
+                <br>
+                <button type="button" onclick="determinarnumero1()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado11"></p>
+        </div>
+<!-- 12. Leer un entero y mostrar todos los múltiplos de 5 comprendidos entre 1 y el 
+número leído.  -->
+        <div class="tarjeta">
+            <h2>Mostrar múltiplos de 5 entre numero y 1</h2>
+            <form id="formulario">
+                <label>Ejercicio 12</label>
+                <input type="number" id="number12" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="multiplosde5()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado12"></p>
+        </div>
+<!-- 13. Mostrar en pantalla los primeros 20 múltiplos de 3.  -->
+        <div class="tarjeta">
+            <h2>Mostrar los primeros 20 múltiplos de 3</h2>
+            <form id="formulario">
+                <label>Ejercicio 13</label>
+                <br>
+                <button type="button" onclick="primerosmultiplosde3()">Mostrar los múltiplos de 3</button>
+            </form>
+            <br>
+            <p id="resultado13"></p>
+        </div>
+<!-- 14. Escribir en pantalla el resultado de sumar los primeros 20 múltiplos de 3.  -->
+        <div class="tarjeta">
+            <h2>Mostrar suma de 20 múltiplos de 3</h2>
+            <form id="formulario">
+                <label>Ejercicio 14</label>
+                <br>
+                <button type="button" onclick="sumamultiplosde3()">Mostrar suma de los múltiplos de 3</button>
+            </form>
+            <br>
+            <p id="resultado14"></p>
+        </div>
+<!-- 15. Mostrar en pantalla el promedio entero de los n primeros múltiplos de 3 para un 
+número n leído.  -->
+        <div class="tarjeta">
+            <h2>Mostrar promedio de una cantidad N de múltiplos de 3 de un numero N</h2>
+            <form id="formulario">
+                <label>Ejercicio 15 (N1)</label>
+                <input type="number" id="number15" placeholder="Ingresar la cantidad de múltiplos de 3 a usar">
+                <label>Ejercicio 15 (N2)</label>
+                <input type="number" id="number15_2" placeholder="Ingresar el numero a usar">
+                <br>
+                <button type="button" onclick="promedioentre2numeros()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado15"></p>
+        </div>
+<!-- 16. Promediar los x primeros múltiplos de 2 y determinar si ese promedio es mayor 
+que los y primeros múltiplos de 5 para valores de x y y leídos.  -->
+        <div class="tarjeta">
+            <h2>Promediar cantidad de múltiplos de 2 y 5 -- Sacar el mayor de ambos</h2>
+            <form id="formulario">
+                <label>Ejercicio 16 (N1)</label>
+                <input type="number" id="number16" placeholder="ingresar cantidad de múltiplos de 2">
+                <label>Ejercicio 16 (N2)</label>
+                <input type="number" id="number16_2" placeholder="ingresar cantidad de múltiplos de 5">
+                <br>
+                <button type="button" onclick="mayordelpromedioXY()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado16"></p>
+        </div>
+<!-- 17. Leer dos números enteros y mostrar todos los múltiplos de 5 comprendidos entre 
+el menor y el mayor.  -->
+        <div class="tarjeta">
+            <h2>Mostrar múltiplos de 5 entre dos números</h2>
+            <form id="formulario">
+                <label>Ejercicio 17 (N1)</label>
+                <input type="number" id="number17" placeholder="ingresar numero">
+                <label>Ejercicio 17 (N2)</label>
+                <input type="number" id="number17_2" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="multiplosde5menormayor()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado17"></p>
+        </div>
+<!-- 18. Leer un número entero y determinar si es primo.  -->
+        <div class="tarjeta">
+            <h2>Determinar si numero es primo</h2>
+            <form id="formulario">
+                <label>Ejercicio 18</label>
+                <input type="number" id="number18" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="analizarnumeroprimo()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado18"></p>
+        </div>
+<!-- 19. Leer un número entero y determinar cuántos dígitos tiene.  -->
+        <div class="tarjeta">
+            <h2>Determinar cuantos dígitos tiene un numero</h2>
+            <form id="formulario">
+                <label>Ejercicio 19</label>
+                <input type="number" id="number19" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="cantidaddigitos()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado19"></p>
+        </div>
+<!-- 20. Leer un número entero y determinar a cuánto es igual la suma de sus dígitos.  -->
+        <div class="tarjeta">
+            <h2>Calcular suma de sus dígitos</h2>
+            <form id="formulario">
+                <label>Ejercicio 20</label>
+                <input type="number" id="number20" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="sumadigitos()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado20"></p>
+        </div>
+<!-- 21. Leer un número entero y determinar cuántas veces tiene el dígito 1.  -->
+        <div class="tarjeta">
+            <h2>Determinar cuantas veces esta el uno</h2>
+            <form id="formulario">
+                <label>Ejercicio 21</label>
+                <input type="number" id="number21" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="cuantos1existen()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado21"></p>
+        </div>
+<!-- 22. Leer un número entero y determinar si la suma de sus dígitos es también un 
+número primo.  -->
+        <div class="tarjeta">
+            <h2>Determinar si dígitos suman en uno primo</h2>
+            <form id="formulario">
+                <label>Ejercicio 22</label>
+                <input type="number" id="number22" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="digitosdanprimo()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado22"></p>
+        </div>
+<!-- 23. Leer un número entero y determinar a cuánto es igual la suma de sus dígitos 
+pares.  -->
+        <div class="tarjeta">
+            <h2>Cuanto es la suma de los dígitos pares</h2>
+            <form id="formulario">
+                <label>Ejercicio 23</label>
+                <input type="number" id="number23" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="sumadedigitospares()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado23"></p>
+        </div>
+<!-- 24. Leer un número entero y determinar a cuánto es igual el promedio entero de sus 
+dígitos.  -->
+        <div class="tarjeta">
+            <h2>Determinar el promedio de los digitos</h2>
+            <form id="formulario">
+                <label>Ejercicio 24</label>
+                <input type="number" id="number24" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="promediosumadigitos()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado24"></p>
+        </div>
+<!-- 25. Leer un número entero y determinar cuál es el mayor de sus dígitos  -->
+        <div class="tarjeta">
+            <h2>Determinar mayor de los dígitos</h2>
+            <form id="formulario">
+                <label>Ejercicio 25</label>
+                <input type="number" id="number25" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="mayordelosdigitos()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado25"></p>
+        </div>
+<!-- 26. Leer 2 números enteros y determinar cuál de los dos tiene mayor cantidad de 
+dígitos  -->
+        <div class="tarjeta">
+            <h2>Determinar mayor cantidad de dígitos</h2>
+            <form id="formulario">
+                <label>Ejercicio 26 (N1)</label>
+                <input type="number" id="number26" placeholder="ingresar numero">
+                <label>Ejercicio 26 (N2)</label>
+                <input type="number" id="number26_2" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="mayorcantidaddigitos()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado26"></p>
+        </div>
+<!-- 27. Leer 2 números enteros y determinar cual de los dos tiene mayor cantidad de 
+dígitos primos.  -->
+        <div class="tarjeta">
+            <h2>Determinar mayor cantidad de dígitos primos</h2>
+            <form id="formulario">
+                <label>Ejercicio 27 (N1)</label>
+                <input type="number" id="number27" placeholder="ingresar numero">
+                <label>Ejercicio 27 (N2)</label>
+                <input type="number" id="number27_2" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="mayorcantidaddigitosprimos()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado27"></p>
+        </div>
+<!-- 28. Leer un número entero y determinar a cuánto es igual el primero de sus dígitos.  -->
+        <div class="tarjeta">
+            <h2>Determinar cuanto vale el primero dígito</h2>
+            <form id="formulario">
+                <label>Ejercicio 28</label>
+                <input type="number" id="number28" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="valorprimerdigito()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado28"></p>
+        </div>
+<!-- 29. Leer un número entero y mostrar todos sus componentes numéricos o sea aquellos para quienes el sea un múltiplo.  -->
+<!-- !!! en este ejercicio toca leer un numero y descomponerlo ejemplo -- 256 y averiguar si el 2 el 5 y el 6 son múltiplo de 256 !!! -->
+        <div class="tarjeta">
+            <h2>Mostrar componentes numéricos y decir cuales son múltiplos</h2>
+            <form id="formulario">
+                <label>Ejercicio 29</label>
+                <input type="number" id="number29" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="componentesnumericosmultiplos()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado29"></p>
+        </div>
+<!-- 30. Leer números hasta que digiten 0 y determinar a cuánto es igual el promedio de 
+los número terminados en 5.  -->
+        <div class="tarjeta">
+            <h2>Leer números hasta que den 0 y decir promedio de los terminados en 5</h2>
+            <form id="formulario">
+                <label>Ejercicio 30</label>
+                <input type="number" id="number30" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="promedionumerosterminanen5()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado30"></p>
+        </div>
+<!-- 31. Leer números hasta que digiten 0 y determinar a cuanto es igual el promedio 
+entero de los número primos leídos.  -->
+        <div class="tarjeta">
+            <h2>Determinar promedio números primos leidos</h2>
+            <form id="formulario">
+                <label>Ejercicio 31</label>
+                <input type="number" id="number31" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="promedionumerosprimos()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado31"></p>
+        </div>
+<!-- 32. Si 32768 es el tope superior para los números entero cortos, determinar cuál es 
+el número primo mas cercano por debajo de él.  -->
+        <div class="tarjeta">
+            <h2>Determinar numero primo mas cercano a 32.768</h2>
+            <form id="formulario">
+                <label>Ejercicio 32</label>
+                <br>
+                <button type="button" onclick="verificarnumeroprimo32768()">Ver cual es el numero primos mas cercano a 32.768</button>
+            </form>
+            <br>
+            <p id="resultado32"></p>
+        </div>
+<!-- 33. Generar los números del 1 al 10 utilizando un ciclo que vaya de 10 a 1.  -->
+        <div class="tarjeta">
+            <h2>Generar números de 1 al 10</h2>
+            <form id="formulario">
+                <label>Ejercicio 33</label>
+                <br>
+                <button type="button" onclick="generarnumeros1al10()">Generar los números del 1 al 10</button>
+            </form>
+            <br>
+            <p id="resultado33"></p>
+        </div>
+<!-- 34. Leer dos números enteros y determinar a cuánto es igual el producto mutuo del 
+primer dígito de cada uno.  -->
+<!-- el producto mutuo es multiplicar el primer dígito por el mismo y mostrar ambos -->
+<!-- EJEMPLO 35 y 49 seria 3*3 y 4*4 y mostrar el resultado de la operación -->
+        <div class="tarjeta">
+            <h2>Determinar producto mutuo del primer dígito de ambos</h2>
+            <form id="formulario">
+                <label>Ejercicio 34 (N1)</label>
+                <input type="number" id="number34" placeholder="ingresar numero">
+                <label>Ejercicio 34 (N2)</label>
+                <input type="number" id="number34_2" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="productomutuo()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado34"></p>
+        </div>
+<!-- 35. Mostrar en pantalla la tabla de multiplicar del número 5.  -->
+        <div class="tarjeta">
+            <h2>Mostrar tabla de multiplicar numero 5</h2>
+            <form id="formulario">
+                <label>Ejercicio 35</label>
+                <br>
+                <button type="button" onclick="tablamultiplicarnumero5()">Mostrar la tabla de multiplicar</button>
+            </form>
+            <br>
+            <p id="resultado35"></p>
+        </div>
+<!-- 36. Leer un número y calcularle su factorial.  -->
+        <div class="tarjeta">
+            <h2>Calcular numero factorial</h2>
+            <form id="formulario">
+                <label>Ejercicio 36</label>
+                <input type="number" id="number36" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="calcularfactorial()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado36"></p>
+        </div>
+<!-- 37. Leer un número y calcularle el factorial a todos los enteros comprendidos entre 1 
+y el número leído.  -->
+<!-- Se debe mostrar el factorial de TODOS los números antes del numero ingresado se muestra !n y el resultado -->
+        <div class="tarjeta">
+            <h2>Calcular factorial de todos los enteros entre el numero y 1</h2>
+            <form id="formulario">
+                <label>Ejercicio 37</label>
+                <input type="number" id="number37" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="factorialtodoslosnumeros()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado37"></p>
+        </div>
+<!-- 38. Leer un número entero y calcular el promedio entero de los factoriales de los 
+enteros comprendidos entre 1 y el número leído.  -->
+        <div class="tarjeta">
+            <h2>Calcular promedio de factoriales entre numero y 1</h2>
+            <form id="formulario">
+                <label>Ejercicio 38</label>
+                <input type="number" id="number38" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="promediofactorial()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado38"></p>
+        </div>
+<!-- 39. Leer un número entero y calcular a cuánto es igual la sumatoria de todos los 
+factoriales de los números comprendidos entre 1 y el número leído.  -->
+        <div class="tarjeta">
+            <h2>Calcular sumatoria de los factoriales entre numero y 1</h2>
+            <form id="formulario">
+                <label>Ejercicio 39</label>
+                <input type="number" id="number39" placeholder="ingresar numero">
+                <br>
+                <button type="button" onclick="sumatoriafactoriales()">Analizar</button>
+            </form>
+            <br>
+            <p id="resultado39"></p>
+        </div>
+<!-- 40. Utilizando ciclos anidados generar las siguientes ternas de números 
+    1 1 1 
+    2 1 2 
+    3 1 3 
+    4 2 1 
+    5 2 2 
+    6 2 3 
+    7 3 1 
+    8 3 2 
+    9 3 3   -->
+        <div class="tarjeta">
+            <h2>Generar ternas de números</h2>
+            <form id="formulario">
+                <label>Ejercicio 40</label>
+                <br>
+                <button type="button" onclick="ternasdenumeros()">Generar ternas de números</button>
+            </form>
+            <br>
+            <p id="resultado40"></p>
+        </div>
+    </div>
+</body>
+</html>

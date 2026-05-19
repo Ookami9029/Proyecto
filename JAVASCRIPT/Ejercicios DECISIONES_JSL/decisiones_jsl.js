@@ -240,7 +240,7 @@ function posicionMayorDigito() {
 //14° EJERCICIO -- Leer un número de tres dígitos y determinar si algún dígito es múltiplo de los otros.
 function digitoMultiploDeOtros() {
     let n = Math.abs(Number(document.getElementById('number14').value));
-    let d1 = Math.trunc(n / 100), d2 = Math.trunc((n % 100) / 10), d3 = n % 10;
+    let d1=Math.trunc(n/100), d2=Math.trunc((n%100)/10), d3=n%10;
     // Evitamos división por cero y probamos combinaciones
     if ((d1 !== 0 && d2 % d1 === 0) || (d1 !== 0 && d3 % d1 === 0) || 
         (d2 !== 0 && d1 % d2 === 0) || (d2 !== 0 && d3 % d2 === 0) || 
