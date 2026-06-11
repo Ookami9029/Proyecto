@@ -33,9 +33,9 @@
 
 // trim()    Devuelve una cadena de txt que elimina los espacios
 //            en blanco al inicio y al final
-// trimStart()  elimina los espacios al inicio
-// trimEnd()    elimina los espacios al final
 let txt=" Hola, soy tu       ";
 console.log(txt.trim());
+// trimStart()  elimina los espacios al inicio
 console.log(txt.trimStart());
+// trimEnd()    elimina los espacios al final
 console.log(txt.trimEnd());
