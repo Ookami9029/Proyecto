@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="trabajo_apuesta.js"></script>
+    <link rel="stylesheet" href="trabajo_apuesta.css">
+</head>
+<body>
+    <h1 id="titulo">Generador De Apuesta Aleatorio</h1>
+    <hr>
+    <div id="caja">
+        <h3 id="txt_general">Ingrese los nombres de las personas que van a participar, cuando acabe, presione el botón [generar]</h3>
+        <br>
+        <input type="text" id="input_nombres" placeholder="Ingresar los nombres">
+        <br>
+        <div class="contenedor_botones">
+            <button type="button" id="btn_nombres" onclick="ingresar()">Ingresar nombres</button>
+            <button type="button" id="btn_generar" onclick="generar(vector_nombres)">Generar</button>
+        </div>
+        <p id="resultado"></p>
+    </div>
+</body>
+</html>

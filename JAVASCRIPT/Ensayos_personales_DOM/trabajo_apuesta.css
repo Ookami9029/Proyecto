@@ -4,10 +4,13 @@
 body{
     border-radius: 5px; border: 1px solid #999999; background: #f2f2f2; text-align: center; padding-left: 20px; padding-right: 20px; margin: 20px;
 }
-#btn{
-    padding-left: 12px; padding-right: 12px; font-size: 1rem; margin-top: 8px; margin-bottom: 8px;
+.contenedor_botones{
+    display: flex; justify-content: center; gap: 15px; margin: 8px 10px;
 }
-#btn:hover{
+button{
+    padding-left: 12px; padding-right: 12px; font-size: 1rem;
+}
+button:hover{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
     
 }
