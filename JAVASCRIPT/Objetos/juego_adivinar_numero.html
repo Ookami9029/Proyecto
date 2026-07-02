@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Adivinanza</title>
+    <script defer src="juego_adivinar_numero.js"></script>
+    <link rel="stylesheet" href="juego_adivinar_numero.css">
+</head>
+<body>
+    <h1 id="titulo">Adivina el numero!</h1>
+    <div id="caja">
+        <h3 id="titulo_input">Ingresa un numero entero que este entre 0 y 10</h3>
+        <input type="number" id="ingreso_numero" placeholder="Ingresa tu numero">
+        <button type="button" id="boton" onclick="adivinanza()">Adivinar</button>
+        <p id="resultado_adivinanza"></p>
+        <h2 id="ganar_perder"></h2>
+    </div>
+</body>
+</html>
